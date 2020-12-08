@@ -23,7 +23,7 @@ const rangeTo500 = [
     {step: 4, value: 150},
     {step: 3, value: 100},
     {step: 2, value: 50},
-    {step: 1, value: 0}
+    {step: 1, value: 1}
 ]
 
 const rangeTo1000 = [
@@ -37,7 +37,7 @@ const rangeTo1000 = [
     {step: 4, value: 300},
     {step: 3, value: 200},
     {step: 2, value: 100},
-    {step: 1, value: 0}
+    {step: 1, value: 1}
 ]
 
 const dataToRangeMapping = [
