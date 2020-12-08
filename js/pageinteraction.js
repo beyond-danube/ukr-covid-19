@@ -28,3 +28,19 @@ function getRangeFormSelector(){
   
   return index.range;
 }
+
+function changeColorValuesToDataFromSelector(){
+  let legendcolors = document.getElementById('legendcolors').children;
+
+  let range = getRangeFormSelector();
+
+  for(i = 0; i < legendcolors.length; i++)
+  {
+    let elementStepNumber = parseInt(legendcolors[i].className.split('-')[1]);
+
+    let index = range.findIndex(x => x.step === elementStepNumber);
+    let next = range.findIndex(x => x.step === elementStepNumber + 1);
+
+    legendcolors[i].childNodes[1].nodeValue = range[index].value + '' + (next >= 0 ? (' - ' + range[next].value) : ' +');
+  }
+}
