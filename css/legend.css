@@ -14,7 +14,8 @@ a { color: white; }
     position: absolute;
     right: 10px;
     z-index: 1;
-    max-width: 200px;
+    width: 100%;
+    max-width: 150px;
 }
 
 .settings {
@@ -53,7 +54,7 @@ p {
     .legend {
         border-radius: 10px;
         font-size:16px;
-        max-width: 250px;
+        max-width: 200px;
     }
 
     .settings {

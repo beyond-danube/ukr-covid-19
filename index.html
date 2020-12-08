@@ -79,15 +79,16 @@
 <div id="showHideLegend" onclick="showHide('legendinfo', 'showHideLegendInfo', 'легенду')"><p id="showHideLegendInfo">Сховати легенду</p></div>
 </div>
 
-<div id="selector" class="dateselector" hidden>
+<!-- <div id="selector" class="dateselector" hidden>
   <div><input id="year" type="text"></div>
   <div><input id="month" type="text"></div>
   <div><input id="day" type="text"></div>
   <button onclick="updateDataLayer(false)">OK</button>
-</div>
+</div> -->
 <script>
 
 setDateToSelector();
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5b25kLWRhbnViZSIsImEiOiJja2hheTFhaXgwMms0MnlvZzUyZml3ZDA1In0.m40ntsAMPxPktC2gdI_VyQ';
   let map = new mapboxgl.Map({
@@ -124,7 +125,7 @@ function updateDataLayer(create){
     let matchExpression = ['match', ['get', 'ADM1_PCODE']];
 
     drawdata.forEach(function(row) {
-    matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], lienarGradientBluePurple, rangeTo500));
+    matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], lienarGradientBluePurple, getRangeFormSelector()));
   });
 
   // Last value is the default, used where there is no data

@@ -26,7 +26,7 @@ const rangeTo500 = [
     {step: 1, value: 1}
 ]
 
-const rangeTo900 = [
+const rangeTo1000 = [
     {step: 11, value: 1000},
     {step: 10, value: 900},
     {step: 9, value: 800},
@@ -38,4 +38,10 @@ const rangeTo900 = [
     {step: 3, value: 200},
     {step: 2, value: 100},
     {step: 1, value: 1}
+]
+
+const dataToRangeMapping = [
+    {data: 'Лікарі, які вже працюють з пацієнтами з COVID-19', range: rangeTo500},
+    {data: 'Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)', range: rangeTo1000},
+    {data: 'Зайнято загалом хворими з COVID-19', range: rangeTo1000}
 ]
