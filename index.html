@@ -47,7 +47,7 @@
     <div hidden><input id="year" type="text"></div>
     </div>
     <div class="settingsseparation">
-      <button class="settingsselector" onclick="updateDataLayer(false)">Застосувати</button>
+      <button class="settingsselector" onclick="updateDataLayer()">Застосувати</button>
     </div>
 
   </div>
@@ -105,14 +105,14 @@ map.on('load', function() {
     url: 'mapbox://beyond-danube.16wn2ahv'
   });
 
-  updateDataLayer(true)
+  updateDataLayer()
 });
 
-function updateDataLayer(create){
+function updateDataLayer(){
 
   let day = transformData(getDateFromSelector());
 
-  if(create === false)
+  if(map.getLayer('ukradm-join'))
   {
     map.removeLayer('ukradm-join')
   }
