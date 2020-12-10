@@ -47,7 +47,7 @@
     <div hidden><input id="year" type="text"></div>
     </div>
     <div class="settingsseparation">
-      <button class="settingsselector" onclick="updateDataLayer(false)">Застосувати</button>
+      <button class="settingsselector" onclick="updateDataLayer(false)" hidden>Застосувати</button>
     </div>
 
   </div>
@@ -150,6 +150,9 @@ function updateDataLayer(create){
 
 document.getElementById('data').addEventListener('change', dataInfoToLegend);
 document.getElementById('data').addEventListener('change', changeColorValuesToDataFromSelector);
+document.getElementById('data').addEventListener('change', (updateDataEvent));
+document.getElementById('month').addEventListener('change', updateDataEvent);
+document.getElementById('day').addEventListener('blur', updateDataEvent);
 
 </script>
 </body>
