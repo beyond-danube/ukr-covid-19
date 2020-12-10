@@ -23,6 +23,7 @@
 <div id="map"></div>
 
 <div id="settings" class="settings">
+  <div id="showHideSettings" onclick="showHide('settingsdetails', 'showHideSettingsInfo', 'налаштування')"><p id="showHideSettingsInfo">Сховати налаштування</p></div>
   <div id="settingsdetails">
     <div class="settingsseparation">
       <select id="data" class="settingsselector">
@@ -44,14 +45,11 @@
         <option value="12">Грудня</option>
       </select>
     
-    <div hidden><input id="year" type="text"></div>
-    </div>
-    <div class="settingsseparation">
-      <button class="settingsselector" onclick="updateDataLayer()">Застосувати</button>
+      <div hidden><input id="year" type="text"></div>
     </div>
 
+    <button class="settingsselector" onclick="updateDataLayer()">Застосувати</button>
   </div>
-  <div id="showHideSettings" onclick="showHide('settingsdetails', 'showHideSettingsInfo', 'налаштування')"><p id="showHideSettingsInfo">Сховати налаштування</p></div>
 </div>
 
 <div id="obl-legend" class="legend">
