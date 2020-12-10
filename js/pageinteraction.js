@@ -44,3 +44,7 @@ function changeColorValuesToDataFromSelector(){
     legendcolors[i].childNodes[1].nodeValue = range[index].value + '' + (next >= 0 ? (' - ' + range[next].value) : ' +');
   }
 }
+
+function updateDataEvent() {
+  updateDataLayer(false);
+}
