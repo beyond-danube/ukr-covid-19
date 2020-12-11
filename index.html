@@ -35,8 +35,8 @@
         <optgroup label="Аналіз показників">
           <option value="Зайнято загалом хворими з COVID-19|Лікарі, які вже працюють з пацієнтами з COVID-19">Паціентів з COVID-19 на одного лікаря</option>
           <option value="Лікарі, які вже працюють з пацієнтами з COVID-19|Зайнято загалом хворими з COVID-19">Лікарів на одно паціента з COVID-19</option>
-          <option value="Зайнято загалом хворими з COVID-19|Загалом, ліжок виділено для госпіталізації хворих з COVID-19">Зайнято ліжок виділених для хворих на COVID-19</option>
-          <option value="Зайнято реанімаційні / інтенсивної терапії|Реанімаційні / Інтенсивної терапії">Зайнято реанімаційних виділених для хворих на COVID-19</option>
+          <option value="Зайнято загалом хворими з COVID-19|Загалом, ліжок виділено для госпіталізації хворих з COVID-19">Зайнято ліжок виділених на COVID-19</option>
+          <option value="Зайнято реанімаційні / інтенсивної терапії|Реанімаційні / Інтенсивної терапії">Зайнято реанімаційних виділених на COVID-19</option>
         </optgroup>
       </select><br>
     </div>
@@ -56,18 +56,12 @@
       <div hidden><input id="year" type="text"></div>
     </div>
 
-    <button class="settingsselector" onclick="updateDataLayer()">Застосувати</button>
+    <button class="settingsselector" onclick="updateDataLayer()">Показати</button>
   </div>
 </div>
 
 <div id="obl-legend" class="legend">
  <div id=legendinfo>
-  <p id="datainfolegend">
-    Лікарі зайняті з хворими на COVID-19
-  </p>
-  <p>    
-    за <a href="https://covid19.gov.ua/analitichni-paneli-dashbordy" target="blank">даними МОЗ</a> 
-  </p>
   <div id="legendcolors">
     <div class="step-11"><span style="background-color:#8800A3"></span>500 +</div>
     <div class="step-10"><span style="background-color:#A000A3"></span>450 - 500</div>
@@ -154,7 +148,6 @@ function updateDataLayer(){
   .then(drawData);
 }
 
-document.getElementById('data').addEventListener('change', dataInfoToLegend);
 document.getElementById('data').addEventListener('change', changeColorValuesToDataFromSelector);
 
 </script>

@@ -10,14 +10,14 @@ function showHide(id, infoId, textToChange) {
   }
 }
   
-function dataInfoToLegend(){
-  let legend = document.getElementById('datainfolegend');
-  let settings = document.getElementById('data');
+// function dataInfoToLegend(){
+//   let legend = document.getElementById('datainfolegend');
+//   let settings = document.getElementById('data');
 
-  let selected = settings.options[settings.selectedIndex].text;
+//   let selected = settings.options[settings.selectedIndex].text;
 
-  legend.innerText = selected;
-}
+//   legend.innerText = selected;
+// }
 
 function getRangeFormSelector(){
   let settings = document.getElementById('data');
