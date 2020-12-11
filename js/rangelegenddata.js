@@ -40,8 +40,38 @@ const rangeTo1000 = [
     {step: 1, value: 1}
 ]
 
+const rangeTo10 = [
+    {step: 11, value: 10},
+    {step: 10, value: 9},
+    {step: 9, value: 8},
+    {step: 8, value: 7},
+    {step: 7, value: 6},
+    {step: 6, value: 5},
+    {step: 5, value: 4},
+    {step: 4, value: 3},
+    {step: 3, value: 2},
+    {step: 2, value: 1},
+    {step: 1, value: 0}
+]
+
+const rangeTo1 = [
+    {step: 11, value: 1},
+    {step: 10, value: 0.9},
+    {step: 9, value: 0.8},
+    {step: 8, value: 0.7},
+    {step: 7, value: 0.6},
+    {step: 6, value: 0.5},
+    {step: 5, value: 0.4},
+    {step: 4, value: 0.3},
+    {step: 3, value: 0.2},
+    {step: 2, value: 0.1},
+    {step: 1, value: 0}
+]
+
 const dataToRangeMapping = [
     {data: 'Лікарі, які вже працюють з пацієнтами з COVID-19', range: rangeTo500},
     {data: 'Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)', range: rangeTo1000},
-    {data: 'Зайнято загалом хворими з COVID-19', range: rangeTo1000}
+    {data: 'Зайнято загалом хворими з COVID-19', range: rangeTo1000},
+    {data: 'Зайнято загалом хворими з COVID-19|Лікарі, які вже працюють з пацієнтами з COVID-19', range: rangeTo10},
+    {data: 'Лікарі, які вже працюють з пацієнтами з COVID-19|Зайнято загалом хворими з COVID-19', range: rangeTo1}
 ]
