@@ -68,10 +68,26 @@ const rangeTo1 = [
     {step: 1, value: 0}
 ]
 
+const rangeTo100Percent = [
+    {step: 11, value: '100%'},
+    {step: 10, value: '90%'},
+    {step: 9, value: '80%'},
+    {step: 8, value: '70%'},
+    {step: 7, value: '60%'},
+    {step: 6, value: '50%'},
+    {step: 5, value: '40%'},
+    {step: 4, value: '30%'},
+    {step: 3, value: '20%'},
+    {step: 2, value: '10%'},
+    {step: 1, value: '1%'}
+]
+
 const dataToRangeMapping = [
     {data: 'Лікарі, які вже працюють з пацієнтами з COVID-19', range: rangeTo500},
     {data: 'Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)', range: rangeTo1000},
     {data: 'Зайнято загалом хворими з COVID-19', range: rangeTo1000},
     {data: 'Зайнято загалом хворими з COVID-19|Лікарі, які вже працюють з пацієнтами з COVID-19', range: rangeTo10},
-    {data: 'Лікарі, які вже працюють з пацієнтами з COVID-19|Зайнято загалом хворими з COVID-19', range: rangeTo1}
+    {data: 'Лікарі, які вже працюють з пацієнтами з COVID-19|Зайнято загалом хворими з COVID-19', range: rangeTo1},
+    {data: 'Зайнято загалом хворими з COVID-19|Загалом, ліжок виділено для госпіталізації хворих з COVID-19', range: rangeTo100Percent},
+    {data: 'Зайнято реанімаційні / інтенсивної терапії|Реанімаційні / Інтенсивної терапії', range: rangeTo100Percent}
 ]

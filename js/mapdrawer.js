@@ -4,7 +4,9 @@ function getColor(value, gradient, range){
 
   for(let i = 0; i < range.length; i++)
   {
-    if(value >= range[i].value)
+    let rangeValue = !isNaN(range[i].value) ? range[i].value : range[i].value.includes('%') ? parseInt(range[i].value) / 100 : parseFloat(range[i].value);
+
+    if(value >= rangeValue)
     {
       let index = gradient.find(x => x.step === range[i].step);
       color = index.color;

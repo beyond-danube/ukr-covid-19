@@ -41,6 +41,6 @@ function changeColorValuesToDataFromSelector(){
     let index = range.findIndex(x => x.step === elementStepNumber);
     let next = range.findIndex(x => x.step === elementStepNumber + 1);
 
-    legendcolors[i].childNodes[1].nodeValue = range[index].value + '' + (next >= 0 ? (' - ' + range[next].value) : ' +');
+    legendcolors[i].childNodes[1].nodeValue = (isNaN(range[index].value) && range[index].value.includes('%') ? parseInt(range[index].value) : range[index].value) + '' + (next >= 0 ? (' - ' + range[next].value) : ' +');
   }
 }
