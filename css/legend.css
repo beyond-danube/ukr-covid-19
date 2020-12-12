@@ -85,10 +85,6 @@ p {
     margin-bottom: 5px;
 }
 
-input[type=number]{
-    width: 30px;
-}
-
 .infoandshare {
     width: 100%;
     float:left;
@@ -102,4 +98,15 @@ input[type=number]{
 
 #showHideInfo, #showHideLegend, #showHideSettings {
     cursor: pointer;
+}
+
+input[type="number"], select, button {
+    padding:2px;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    width: 35px;
 }
