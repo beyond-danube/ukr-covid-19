@@ -17,13 +17,16 @@
 <link rel="stylesheet" href="css/legend.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
+<link rel="stylesheet" href="likely/likely.css">
+<script src="likely/likely.js"></script>
+
 </head>
 <body>
 
 <div id="map"></div>
 
 <div id="settings" class="settings">
-  <div id="showHideSettings" onclick="showHide('settingsdetails', 'showHideSettingsInfo', 'налаштування')"><p id="showHideSettingsInfo">Сховати налаштування</p></div>
+  <div id="showHideSettings" onclick="showHide('settingsdetails', this.id)">сховати налаштування</div>
   <div id="settingsdetails">
     <div class="settingsseparation">
       <select id="data" class="settingsselector">
@@ -76,15 +79,26 @@
     <div class="step-1"><span style="background-color:#75BEFF"></span>1 - 50</div>
   </div>
 </div>
-<div id="showHideLegend" onclick="showHide('legendinfo', 'showHideLegendInfo', 'легенду')"><p id="showHideLegendInfo">Сховати легенду</p></div>
+<div id="showHideLegend" onclick="showHide('legendinfo', this.id)">сховати легенду</div>
 </div>
 
-<!-- <div id="selector" class="dateselector" hidden>
-  <div><input id="year" type="text"></div>
-  <div><input id="month" type="text"></div>
-  <div><input id="day" type="text"></div>
-  <button onclick="updateDataLayer(false)">OK</button>
-</div> -->
+<div class="info">
+  <div id="info" style="margin-bottom: 10px; display: none;">
+    <p>відкриті дані <a href="https://covid19.gov.ua/analitichni-paneli-dashbordy" target="blank">МОЗ</a><br>
+    візуалізація <a href="https://siniavtsev.io" target="blank">siniavtsev.io</a></p>
+  </div>
+
+  <div class="infoandshare">
+    <div id="showHideInfo" class="infoentry" onclick="showHide('info')">
+      <span style="opacity: 0.7;">інфо</span>
+    </div>
+    <div class="likely likely-light likely-small infoentry">
+      <div class="twitter" data-via="beyond_danube"></div>
+      <div class="telegram"></div>
+      <div class="facebook"></div>
+  </div>
+</div>
+
 <script>
 
 setDateToSelector();

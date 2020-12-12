@@ -1,23 +1,22 @@
-function showHide(id, infoId, textToChange) {
-  let legendinfo = document.getElementById(id);
-  let swither = document.getElementById(infoId);
-  if (legendinfo.style.display === "none"){
-    legendinfo.style.display = "block";
-    swither.innerText = 'cховати ' + textToChange;
+function showHide(id, infoId = null) {
+
+  let panel = document.getElementById(id);
+  let text = document.getElementById(infoId);
+
+  if (panel.style.display === "none"){
+    panel.style.display = "block";
+    if(text !== null)
+    {
+      text.innerText = text.innerText.replace('показати ', 'сховати ');
+    }
   } else {
-    legendinfo.style.display = "none";
-    swither.innerText = 'показати ' + textToChange;
+    panel.style.display = "none";
+    if(text !== null)
+    {
+      text.innerText = text.innerText.replace('показати ', 'сховати ');
+    }
   }
 }
-  
-// function dataInfoToLegend(){
-//   let legend = document.getElementById('datainfolegend');
-//   let settings = document.getElementById('data');
-
-//   let selected = settings.options[settings.selectedIndex].text;
-
-//   legend.innerText = selected;
-// }
 
 function getRangeFormSelector(){
   let settings = document.getElementById('data');

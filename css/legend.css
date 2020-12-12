@@ -2,34 +2,36 @@ body { margin: 0; padding: 0; color: black;}
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 a { color: white; }
 
-.legend {
+.legend, .settings, .info {
     background-color:rgb(0, 0, 0);
+    opacity: 0.9;
     border-radius: 5px;
-    bottom: 40px;
     font-size:12px;
     font-family:  'Open Sans', sans-serif;
     font-weight: 300;
     color: #fff;;
     padding: 10px;
     position: absolute;
-    right: 10px;
     z-index: 1;
+}
+
+.legend {
+    right: 10px;
+    bottom: 40px;
     max-width: 150px;
 }
 
 .settings {
-    background-color:rgb(0, 0, 0);
-    border-radius: 5px;
     top: 10px;
-    font-size:12px;
-    font-family:  'Open Sans', sans-serif;
-    font-weight: 300;
-    color: #fff;;
-    padding: 10px;
-    position: absolute;
     left: 10px;
-    z-index: 1;
 }
+
+.info {
+    bottom: 40px;
+    left: 10px;
+}
+
+
  
 .legend div span {
     border-radius: 50%;
@@ -50,16 +52,14 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
-    .legend {
+    .legend, .settings, .info {
         border-radius: 10px;
         font-size:16px;
-        max-width: 200px;
     }
 
-    .settings {
-        border-radius: 10px;
-        font-size:16px;
-    }
+    .legend {
+    max-width: 200px;
+}
 
     .legend div span {
         height: 16px;
@@ -74,6 +74,21 @@ p {
 
 input[type=number]{
     width: 30px;
+}
+
+.infoandshare {
+    width: 100%;
+    float:left;
+    vertical-align: center;
+}
+
+.infoentry {
+    margin-right: 10px;
+    float: left;
+}
+
+#showHideInfo, #showHideLegend, #showHideSettings {
+    cursor: pointer;
 }
 
 .dateselector {
