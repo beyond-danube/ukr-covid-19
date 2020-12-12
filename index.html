@@ -138,7 +138,7 @@ function updateDataLayer(){
 
     let matchExpression = ['match', ['get', 'ADM1_PCODE']];
 
-    drawdata.forEach(function(row) {
+    drawdata.data.forEach(function(row) {
     matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], lienarGradientBluePurple, getRangeFormSelector()));
   });
 
