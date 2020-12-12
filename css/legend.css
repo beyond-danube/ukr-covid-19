@@ -67,6 +67,19 @@ p {
     }
 }
 
+@media screen and (max-height: 375px )
+{
+    #legendcolors {
+        float: left;
+        width: fit-content;
+    }
+
+    div[class*="step"] {
+        float:left;
+    }
+
+}
+
 .settingsseparation {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -89,18 +102,4 @@ input[type=number]{
 
 #showHideInfo, #showHideLegend, #showHideSettings {
     cursor: pointer;
-}
-
-.dateselector {
-    background-color:rgb(0, 0, 0);
-    border-radius: 5px;
-    bottom: 40px;
-    font-size:12px;
-    font-family:  'Open Sans', sans-serif;
-    font-weight: 300;
-    color: #fff;;
-    padding: 10px;
-    position: absolute;
-    left: 10px;
-    z-index: 1;
 }

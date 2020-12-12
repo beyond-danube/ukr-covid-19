@@ -13,7 +13,7 @@ function showHide(id, infoId = null) {
     panel.style.display = "none";
     if(text !== null)
     {
-      text.innerText = text.innerText.replace('показати ', 'сховати ');
+      text.innerText = text.innerText.replace('сховати ', 'показати ');
     }
   }
 }
@@ -40,6 +40,6 @@ function changeColorValuesToDataFromSelector(){
     let index = range.findIndex(x => x.step === elementStepNumber);
     let next = range.findIndex(x => x.step === elementStepNumber + 1);
 
-    legendcolors[i].childNodes[1].nodeValue = (isNaN(range[index].value) && range[index].value.includes('%') ? parseInt(range[index].value) : range[index].value) + '' + (next >= 0 ? (' - ' + range[next].value) : ' +');
+    legendcolors[i].childNodes[1].nodeValue = (isNaN(range[index].value) && range[index].value.includes('%') ? parseInt(range[index].value) : range[index].value) + '' + (next >= 0 ? ('\u00A0-\u00A0' + range[next].value + '\u00A0\u00A0') : ' +\u00A0\u00A0');
   }
 }
