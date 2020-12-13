@@ -87,7 +87,6 @@ p {
 
 .infoandshare {
     width: 100%;
-    float:left;
     vertical-align: middle;
 }
 
@@ -108,5 +107,5 @@ input[type="number"], select, button {
 }
 
 input[type="number"] {
-    width: 35px;
+    width: 40px;
 }

@@ -3,22 +3,29 @@
 <head>
 <meta charset="utf-8" />
 <title>UKR COVID-19</title>
+
 <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-<meta name="format-detection" content="telephone=no">
+
 <link rel="icon" href="img/favicon.png"> 
 <meta property="og:image" content="img/fb.png">
+
 <script src="js/mozdatagetter.js"></script>
 <script src="js/mapdrawer.js"></script>
 <script src="js/pageinteraction.js"></script>
 <script src="js/rangelegenddata.js"></script>
+<script src="js/configuration.js"></script>
+
 <link rel="stylesheet" href="css/legend.css">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
 <link rel="stylesheet" href="likely/likely.css">
 <script src="likely/likely.js"></script>
+
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
 </head>
 <body>
@@ -96,6 +103,7 @@
       <div class="twitter" data-via="beyond_danube"></div>
       <div class="telegram"></div>
       <div class="facebook"></div>
+    </div>
   </div>
 </div>
 
@@ -104,10 +112,10 @@
 setDateToSelector();
 
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5b25kLWRhbnViZSIsImEiOiJja2hheTFhaXgwMms0MnlvZzUyZml3ZDA1In0.m40ntsAMPxPktC2gdI_VyQ';
+mapboxgl.accessToken = configuration.mapboxToken;
   let map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/beyond-danube/ckhdxe13i040319pvcygzixmu',
+  style: configuration.mapboxStyle,
   center: [31.1828699, 48.383022],
   zoom: 5
 });
