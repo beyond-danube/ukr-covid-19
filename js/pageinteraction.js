@@ -43,3 +43,16 @@ function changeColorValuesToDataFromSelector(){
     legendcolors[i].childNodes[1].nodeValue = (isNaN(range[index].value) && range[index].value.includes('%') ? parseInt(range[index].value) : range[index].value) + '' + (next >= 0 ? ('\u00A0-\u00A0' + range[next].value + '\u00A0\u00A0') : ' +\u00A0\u00A0');
   }
 }
+
+function checkDateInput(){
+  
+  const days31 = ['01', '03', '05', '07', '08', '10', '12']
+  let monthInSelector = document.getElementById('month').value;
+
+  let maxDayNumber = days31.includes(monthInSelector) ? 31 : monthInSelector == "02" ? 28 : 30;
+
+  if (this.value > maxDayNumber || this.value < 1)
+  {
+    this.value = 1;
+  }
+}
