@@ -184,12 +184,9 @@ function updateDataLayer(){
   function drawPopUp(e){
     let index = drawingdata.data.findIndex(x => x.ADM1_PCODE === e.features[0].properties.ADM1_PCODE);
 
-    console.log('length: ' + e.features.length)
+    let originalRegionValue = drawingdata.data[index].DATA
 
-    let regionValue = drawingdata.data[index].DATA;
-
-    console.log('index: ' + index)
-    console.log('value ' + regionValue)
+    let regionValue = (originalRegionValue > 0.01 && originalRegionValue < 1) ? originalRegionValue * 100 + '%' : originalRegionValue;
 
     popup
       .setLngLat(e.lngLat.wrap())
