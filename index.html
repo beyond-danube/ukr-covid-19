@@ -139,6 +139,9 @@ map.on('load', function() {
   updateDataLayer()
 });
 
+let drawingdata;
+let popup = new mapboxgl.Popup();
+
 function updateDataLayer(){
 
   let day = transformData(getDateFromSelector());
@@ -147,15 +150,13 @@ function updateDataLayer(){
   {
     map.removeLayer('ukradm-join')
   }
-  
-
   let drawData = function(result){ 
-    
-    drawdata = result;
+
+    drawingdata = result;
 
     let matchExpression = ['match', ['get', 'ADM1_PCODE']];
-
-    drawdata.data.forEach(function(row) {
+    
+    drawingdata.data.forEach(function(row) {
     matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], lienarGradientBluePurple, getRangeFormSelector()));
   });
 
@@ -177,7 +178,33 @@ function updateDataLayer(){
   getDatabyGeoRegion(day,
     document.getElementById('data').value)
   .then(drawData);
-}
+
+  map.on('click', 'ukradm-join', drawPopUp);
+
+  function drawPopUp(e){
+    let index = drawingdata.data.findIndex(x => x.ADM1_PCODE === e.features[0].properties.ADM1_PCODE);
+
+    console.log('length: ' + e.features.length)
+
+    let regionValue = drawingdata.data[index].DATA;
+
+    console.log('index: ' + index)
+    console.log('value ' + regionValue)
+
+    popup
+      .setLngLat(e.lngLat.wrap())
+      .setHTML(regionValue)
+      .addTo(map);
+  };
+
+  map.on('mouseenter', 'ukradm-join', function () {
+      map.getCanvas().style.cursor = 'pointer';
+  });
+
+  map.on('mouseleave', 'ukradm-join', function () {
+      map.getCanvas().style.cursor = '';
+  });
+};
 
 document.getElementById('data').addEventListener('change', changeColorValuesToDataFromSelector);
 document.getElementById('day').addEventListener('blur', checkDateInput);
