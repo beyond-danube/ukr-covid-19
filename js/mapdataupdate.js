@@ -43,7 +43,7 @@ function drawPopUp(e){
   
     let originalRegionValue = drawingdata.data[index].DATA
   
-    let regionValue = (originalRegionValue > 0.01 && originalRegionValue < 1) ? originalRegionValue * 100 + '%' : originalRegionValue;
+    let regionValue = (originalRegionValue > 0.01 && originalRegionValue < 1) ? parseInt(originalRegionValue * 100) + '%' : originalRegionValue;
   
     popup
       .setLngLat(e.lngLat.wrap())
