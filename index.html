@@ -129,6 +129,8 @@ mapboxgl.accessToken = configuration.mapboxToken;
   zoom: 5
 });
 
+map.doubleClickZoom.disable();
+
 map.on('load', function() {
 
   map.addSource('ukradm', {
