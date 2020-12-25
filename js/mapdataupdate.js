@@ -1,5 +1,7 @@
 function updateDataLayer(){
   
+    let day = transformData(getDateFromSelector());
+
     popup.remove();
   
     if(map.getLayer('ukradm-join'))

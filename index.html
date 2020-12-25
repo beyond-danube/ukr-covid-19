@@ -132,8 +132,6 @@ mapboxgl.accessToken = configuration.mapboxToken;
 let drawingdata;
 let popup = new mapboxgl.Popup();
 
-let day = transformData(getDateFromSelector());
-
 map.doubleClickZoom.disable();
 
 map.on('load', function() {
