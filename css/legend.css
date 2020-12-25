@@ -112,7 +112,7 @@ input[type="number"] {
 
 .mapboxgl-popup-close-button {
     display: none;
-  }
+}
   
 .mapboxgl-popup-content {
     font-family:  'Open Sans', sans-serif;
@@ -127,8 +127,17 @@ input[type="number"] {
 }
   
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
-    -webkit-align-self: center;
-    align-self: center;
-    border-bottom: none;
     border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: rgba(0, 0, 0, 0.8);
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: rgba(0, 0, 0, 0.8);
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-bottom-color: rgba(0, 0, 0, 0.8);
 }
