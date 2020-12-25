@@ -58,8 +58,8 @@ p {
     }
 
     .legend {
-    max-width: 200px;
-}
+        max-width: 200px;
+    }
 
     .legend div span {
         height: 16px;
@@ -108,4 +108,27 @@ input[type="number"], select, button {
 
 input[type="number"] {
     width: 40px;
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+  }
+  
+.mapboxgl-popup-content {
+    font-family:  'Open Sans', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px;
+    min-width: 50px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+  
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    -webkit-align-self: center;
+    align-self: center;
+    border-bottom: none;
+    border-top-color: rgba(0, 0, 0, 0.8);
 }
