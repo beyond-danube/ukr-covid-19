@@ -65,6 +65,10 @@ p {
         height: 16px;
         width: 16px;
     }
+
+    .mapboxgl-popup-content {
+        font-size: 16px !important; 
+    }
 }
 
 @media screen and (max-height: 375px )
