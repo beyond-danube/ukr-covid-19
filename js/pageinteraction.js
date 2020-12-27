@@ -56,3 +56,8 @@ function checkDateInput(){
     this.value = 1;
   }
 }
+
+function selectFiled(){
+  let element = document.getElementById(this.id);
+  element.select();
+}
