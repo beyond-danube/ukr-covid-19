@@ -41,10 +41,14 @@ function updateDataLayer(){
 function drawPopUp(e){
     let index = drawingdata.data.findIndex(x => x.ADM1_PCODE === e.features[0].properties.ADM1_PCODE);
   
-    let originalRegionValue = drawingdata.data[index].DATA
+    let regionValue = "немає даних";
   
-    let regionValue = (originalRegionValue > 0.01 && originalRegionValue < 1) ? parseInt(originalRegionValue * 100) + '%' : originalRegionValue;
-  
+    if(index !== -1)
+    {
+      let originalRegionValue = drawingdata.data[index].DATA;
+      regionValue = (originalRegionValue === null | originalRegionValue === 0) ? regionValue : (originalRegionValue >= 0.01 && originalRegionValue < 1) ? parseInt(originalRegionValue * 100) + '%' : originalRegionValue;
+    }
+
     popup
       .setLngLat(e.lngLat.wrap())
       .setHTML(regionValue)
