@@ -7,13 +7,13 @@ function showHide(id, infoId = null) {
     panel.style.display = "block";
     if(text !== null)
     {
-      text.innerText = text.innerText.replace('показати ', 'сховати ');
+      text.innerHTML = text.innerHTML.replace('показати ', 'сховати ');
     }
   } else {
     panel.style.display = "none";
     if(text !== null)
     {
-      text.innerText = text.innerText.replace('сховати ', 'показати ');
+      text.innerHTML = text.innerHTML.replace('сховати ', 'показати ');
     }
   }
 }
