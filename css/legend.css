@@ -95,7 +95,7 @@ p {
     float: left;
 }
 
-#showHideInfo, #showHideLegend, #showHideSettings {
+#show-hide-info, #show-hide-legend, #show-hide-settings {
     cursor: pointer;
 }
 
@@ -140,4 +140,14 @@ input[type="number"] {
 
 .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
     border-bottom-color: rgba(0, 0, 0, 0.8);
+}
+
+.nice-underline {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.nice-underline-dashed {
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255,255,255,.5);
 }

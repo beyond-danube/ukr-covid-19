@@ -43,10 +43,10 @@
 <div id="map"></div>
 
 <div id="settings" class="settings">
-  <div id="showHideSettings" onclick="showHide('settingsdetails', this.id)">сховати налаштування</div>
-  <div id="settingsdetails">
+  <div id="show-hide-settings" onclick="showHide('settings-details', this.id)">сховати налаштування</div>
+  <div id="settings-details">
     <div class="settingsseparation">
-      <select id="data" class="settingsselector">
+      <select id="data">
         <optgroup label="Показники МОЗ">
           <option value="Зайнято загалом хворими з COVID-19">Ліжок зайнято хворими на COVID-19</option>
           <option value="Лікарі, які вже працюють з пацієнтами з COVID-19">Лікарі зайняті з хворими на COVID-19</option>
@@ -61,8 +61,8 @@
     </div>
 
    <div class="settingsseparation">
-      <input type="number" id="day" class="settingsselector" inputmode="numeric">
-      <select id="month" class="settingsselector">
+      <input type="number" id="day" inputmode="numeric">
+      <select id="month">
         <option value="06">Червня</option>
         <option value="07">Липня</option>
         <option value="08">Серпня</option>
@@ -75,11 +75,11 @@
       <div hidden><input id="year" type="text"></div>
     </div>
 
-    <button class="settingsselector" onclick="updateDataLayer()">Показати</button>
+    <button onclick="updateDataLayer()">Показати</button>
   </div>
 </div>
 
-<div id="obl-legend" class="legend">
+<div class="legend">
  <div id=legendinfo>
   <div id="legendcolors">
     <div class="step-11"><span style="background-color:#690202"></span>1000&nbsp+&nbsp&nbsp</div>
@@ -95,18 +95,18 @@
     <div class="step-1"><span style="background-color:#00e6ab"></span>1&nbsp-&nbsp100&nbsp&nbsp</div>
   </div>
 </div>
-<div id="showHideLegend" onclick="showHide('legendinfo', this.id)">сховати легенду</div>
+<div id="show-hide-legend" onclick="showHide('legendinfo', this.id)">сховати легенду</div>
 </div>
 
 <div class="info">
   <div id="info" style="margin-bottom: 5px; display: none;">
-    <p>відкриті дані <a href="https://covid19.gov.ua/analitichni-paneli-dashbordy" target="blank">МОЗ</a><br>
-    візуалізація <a href="https://siniavtsev.io" target="blank">siniavtsev.io</a></p>
+    <p>відкриті дані <a href="https://covid19.gov.ua/analitichni-paneli-dashbordy" class="nice-underline" target="blank">МОЗ</a><br>
+    візуалізація <a href="https://siniavtsev.io" class="nice-underline" target="blank">siniavtsev.io</a></p>
   </div>
 
   <div class="infoandshare">
-    <div id="showHideInfo" class="infoentry" onclick="showHide('info')">
-      <span style="opacity: 0.7;">інфо</span>
+    <div id="show-hide-info" class="infoentry nice-underline-dashed" style="opacity: 0.7;" onclick="showHide('info')">
+      інфо
     </div>
     <div class="likely likely-light likely-small infoentry" data-counters="no">
       <div class="twitter" data-via="beyond_danube"></div>
