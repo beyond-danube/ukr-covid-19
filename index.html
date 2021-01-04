@@ -63,6 +63,11 @@
    <div class="settingsseparation">
       <input type="number" id="day" inputmode="numeric">
       <select id="month">
+        <option value="01">Січня</option>
+        <option value="02">Лютого</option>
+        <option value="03">Березня</option>
+        <option value="04">Квітня</option>
+        <option value="05">Травня</option>
         <option value="06">Червня</option>
         <option value="07">Липня</option>
         <option value="08">Серпня</option>
@@ -71,8 +76,11 @@
         <option value="11">Листопада</option>
         <option value="12">Грудня</option>
       </select>
-    
-      <div hidden><input id="year" type="text"></div>
+
+      <select id="year">
+        <option value="20">2020</option>
+        <option value="21">2021</option>
+      </select>
     </div>
 
     <button onclick="updateDataLayer()">Показати</button>
