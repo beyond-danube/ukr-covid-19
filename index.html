@@ -90,17 +90,17 @@
 <div class="legend">
  <div id=legendinfo>
   <div id="legendcolors">
-    <div class="step-11"><span style="background-color:#690202"></span>1000&nbsp+&nbsp&nbsp</div>
-    <div class="step-10"><span style="background-color:#81012d"></span>900&nbsp-&nbsp1000&nbsp&nbsp</div>
-    <div class="step-9"><span style="background-color:#990158"></span>800&nbsp-&nbsp900&nbsp&nbsp</div>
-    <div class="step-8"><span style="background-color:#b10083"></span>700&nbsp-&nbsp800&nbsp&nbsp</div>
-    <div class="step-7"><span style="background-color:#c900ae"></span>600&nbsp-&nbsp700&nbsp&nbsp</div>
-    <div class="step-6"><span style="background-color:#e100d9"></span>500&nbsp-&nbsp600&nbsp&nbsp</div>
-    <div class="step-5"><span style="background-color:#b42dcf"></span>400&nbsp-&nbsp500&nbsp&nbsp</div>
-    <div class="step-4"><span style="background-color:#875bc6"></span>300&nbsp-&nbsp400&nbsp&nbsp</div>
-    <div class="step-3"><span style="background-color:#5a8abd"></span>200&nbsp-&nbsp300&nbsp&nbsp</div>
-    <div class="step-2"><span style="background-color:#2db8b4"></span>100&nbsp-&nbsp200&nbsp&nbsp</div>
-    <div class="step-1"><span style="background-color:#00e6ab"></span>1&nbsp-&nbsp100&nbsp&nbsp</div>
+    <div class="step-11"><span style="background-color:#690202"></span>&nbsp</div>
+    <div class="step-10"><span style="background-color:#81012d"></span>&nbsp</div>
+    <div class="step-9"><span style="background-color:#990158"></span>&nbsp</div>
+    <div class="step-8"><span style="background-color:#b10083"></span>&nbsp</div>
+    <div class="step-7"><span style="background-color:#c900ae"></span>&nbsp</div>
+    <div class="step-6"><span style="background-color:#e100d9"></span>&nbsp</div>
+    <div class="step-5"><span style="background-color:#b42dcf"></span>&nbsp</div>
+    <div class="step-4"><span style="background-color:#875bc6"></span>&nbsp</div>
+    <div class="step-3"><span style="background-color:#5a8abd"></span>&nbsp</div>
+    <div class="step-2"><span style="background-color:#2db8b4"></span>&nbsp</div>
+    <div class="step-1"><span style="background-color:#00e6ab"></span>&nbsp</div>
   </div>
 </div>
 <div id="show-hide-legend" class="nice-underline-dashed" onclick="showHide('legendinfo', this.id)">сховати легенду</div>
@@ -164,6 +164,8 @@ map.on('mouseleave', 'ukradm-join', function () {
 document.getElementById('data').addEventListener('change', changeColorValuesToDataFromSelector);
 document.getElementById('day').addEventListener('blur', checkDateInput);
 document.getElementById('day').addEventListener('focus', selectFiled);
+
+window.addEventListener('load', changeColorValuesToDataFromSelector);
 
 </script>
 </body>
