@@ -34,7 +34,7 @@ function updateDataLayer(){
     };
   
     getDatabyGeoRegion(day,
-      document.getElementById('data').value)
+      getFiledValueAccoringToYear())
     .then(drawData);
 };
 
@@ -54,3 +54,15 @@ function drawPopUp(e){
       .setHTML(regionValue)
       .addTo(map);
 };
+
+// A hook to woraround changed data format, made simple by sacrificing couple of days of data around New Year 
+function getFiledValueAccoringToYear(){
+
+  let year = document.getElementById('year').value;
+
+  let settings = document.getElementById('data');
+
+  let field = year === '20' ? settings.value : settings.options[settings.selectedIndex].dataset.newfiled;
+
+  return field;
+}
