@@ -44,6 +44,20 @@ function changeColorValuesToDataFromSelector(){
   }
 }
 
+function setLegendColorsFromRange(range){
+
+  let legendcolors = document.getElementById('legendcolors').children;
+
+  for(i = 0; i < legendcolors.length; i++)
+  {
+    let elementStepNumber = parseInt(legendcolors[i].className.split('-')[1]);
+
+    let index = range.findIndex(x => x.step === elementStepNumber);
+
+    legendcolors[i].childNodes[0].style.backgroundColor = range[index].color;
+  }
+}
+
 function checkDateInput(){
   
   const days31 = ['01', '03', '05', '07', '08', '10', '12']
