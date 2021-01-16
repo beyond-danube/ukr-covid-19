@@ -1,15 +1,15 @@
 const defaultGradient = [
-    {step: 11, color: '#e3259e'},
-    {step: 10, color: '#cc3aa7'},
-    {step: 9, color: '#b54fb1'},
-    {step: 8, color: '#9e64bb'},
-    {step: 7, color: '#8879c4'},
-    {step: 6, color: '#718fce'},
-    {step: 5, color: '#5aa4d8'},
-    {step: 4, color: '#44b9e1'},
-    {step: 3, color: '#2dceeb'},
-    {step: 2, color: '#16e3f5'},
-    {step: 1, color: '#00f9ff'}
+    {step: 11, color: '#E50097'},
+    {step: 10, color: '#E10050'},
+    {step: 9, color: '#DD000D'},
+    {step: 8, color: '#D93400'},
+    {step: 7, color: '#D57300'},
+    {step: 6, color: '#D2B000'},
+    {step: 5, color: '#B1CE00'},
+    {step: 4, color: '#71CA00'},
+    {step: 3, color: '#33C600'},
+    {step: 2, color: '#00C207'},
+    {step: 1, color: '#00BF41'}
 ]
   
 const rangeTo500 = [
