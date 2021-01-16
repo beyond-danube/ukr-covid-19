@@ -1,4 +1,4 @@
-const lienarGradientBluePurple = [
+const defaultGradient = [
     {step: 11, color: '#690202'},
     {step: 10, color: '#81012d'},
     {step: 9, color: '#990158'},

@@ -16,7 +16,7 @@ function updateDataLayer(){
     let matchExpression = ['match', ['get', 'ADM1_PCODE']];
     
     drawingdata.data.forEach(function(row) {
-    matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], lienarGradientBluePurple, getRangeFormSelector()));
+    matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], defaultGradient, getRangeFormSelector()));
   });
 
   // Last value is the default, used where there is no data
