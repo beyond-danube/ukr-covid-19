@@ -47,14 +47,10 @@ a { color: white; }
     margin-bottom: 10px;
 }
 
-p {
-    margin: 0px;
-}
-
 @media screen and (max-width: 1024px) {
     .legend, .settings, .info {
-        border-radius: 10px;
-        font-size:16px;
+        border-radius: 8px;
+        font-size:14px;
     }
 
     .legend {
@@ -62,8 +58,8 @@ p {
     }
 
     .legend div span {
-        height: 16px;
-        width: 16px;
+        height: 14px;
+        width: 14px;
     }
 
     .mapboxgl-popup-content {
@@ -71,27 +67,9 @@ p {
     }
 }
 
-@media screen and (max-height: 375px )
-{
-    #legendcolors {
-        float: left;
-        width: fit-content;
-    }
-
-    div[class*="step"] {
-        float:left;
-    }
-
-}
-
 .settingsseparation {
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-.infoandshare {
-    width: 100%;
-    vertical-align: middle;
 }
 
 .infoentry {
@@ -129,7 +107,7 @@ input[type="number"] {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
 }
-  
+
 .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
     border-top-color: rgba(0, 0, 0, 0.8);
 }
