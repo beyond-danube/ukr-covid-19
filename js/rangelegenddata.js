@@ -1,15 +1,15 @@
-const lienarGradientBluePurple = [
-    {step: 11, color: '#690202'},
-    {step: 10, color: '#81012d'},
-    {step: 9, color: '#990158'},
-    {step: 8, color: '#b10083'},
-    {step: 7, color: '#c900ae'},
-    {step: 6, color: '#e100d9'},
-    {step: 5, color: '#b42dcf'},
-    {step: 4, color: '#875bc6'},
-    {step: 3, color: '#5a8abd'},
-    {step: 2, color: '#2db8b4'},
-    {step: 1, color: '#00e6ab'}
+const defaultGradient = [
+    {step: 11, color: '#E50097'},
+    {step: 10, color: '#E10050'},
+    {step: 9, color: '#DD000D'},
+    {step: 8, color: '#D93400'},
+    {step: 7, color: '#D57300'},
+    {step: 6, color: '#D2B000'},
+    {step: 5, color: '#B1CE00'},
+    {step: 4, color: '#71CA00'},
+    {step: 3, color: '#33C600'},
+    {step: 2, color: '#00C207'},
+    {step: 1, color: '#00BF41'}
 ]
   
 const rangeTo500 = [

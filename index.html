@@ -49,13 +49,13 @@
       <select id="data">
         <optgroup label="Показники МОЗ">
           <option value="Лікарі, які вже працюють з пацієнтами з COVID-19" data-newfiled="Лікарі, які вже працюють з пацієнтами з COVID-19">Лікарі зайняті з хворими на COVID-19</option>
-          <option value="Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)" data-newfiled="Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)">Лікарі можуть бути зайняті з хворими COVID-19</option>
-          <option value="Зайнято загалом хворими з COVID-19"  data-newfiled="1. Пацієнтів, хорих на COVID-19, загалом">Ліжок зайнято хворими на COVID-19</option>
+          <option value="Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)" data-newfiled="Всі лікарі, які можуть бути задіяні з COVID-19 (усі спеціальності)">Лікарі, що можуть бути зайняті</option>
+          <option value="Зайнято загалом хворими з COVID-19"  data-newfiled="1. Пацієнтів, хорих на COVID-19, загалом">Паціентів з COVID-19</option>
         </optgroup>
         <optgroup label="Аналіз показників">
-          <option value="Зайнято загалом хворими з COVID-19|Лікарі, які вже працюють з пацієнтами з COVID-19" data-newfiled="1. Пацієнтів, хорих на COVID-19, загалом|Лікарі, які вже працюють з пацієнтами з COVID-19">Паціентів з COVID-19 на одного лікаря</option>
+          <option value="Зайнято загалом хворими з COVID-19|Лікарі, які вже працюють з пацієнтами з COVID-19" data-newfiled="1. Пацієнтів, хорих на COVID-19, загалом|Лікарі, які вже працюють з пацієнтами з COVID-19">Паціентів на одного лікаря</option>
           <option value="Зайнято загалом хворими з COVID-19|Загалом, ліжок виділено для госпіталізації хворих з COVID-19" data-newfiled="1. Пацієнтів, хорих на COVID-19, загалом|2. Ліжок виділено для госпіталізації хворих на COVID-19 загалом">Відсоток зайнятих ліжок</option>
-          <option value="Зайнято реанімаційні / інтенсивної терапії|Реанімаційні / Інтенсивної терапії" data-newfiled="1.4.1. з них, які займають ліжка реанімаційні/інтенсивної терапії |2.1.1. з них реанімаційних/ інтенсивної терапії">Відсоток зайнятих ліжок в реанімаційних</option>
+          <option value="Зайнято реанімаційні / інтенсивної терапії|Реанімаційні / Інтенсивної терапії" data-newfiled="1.4.1. з них, які займають ліжка реанімаційні/інтенсивної терапії |2.1.1. з них реанімаційних/ інтенсивної терапії">Відсоток зайнятих реанімаційних</option>
         </optgroup>
       </select><br>
     </div>
@@ -107,26 +107,26 @@
 </div>
 
 <div class="info">
-  <div id="info" style="margin-bottom: 5px; display: none;">
-    <p>відкриті дані <a href="https://covid19.gov.ua/analitichni-paneli-dashbordy" class="nice-underline" target="blank">МОЗ</a><br>
-    візуалізація <a href="https://siniavtsev.io" class="nice-underline" target="blank">siniavtsev.io</a></p>
-  </div>
-
-  <div class="infoandshare">
-    <div id="show-hide-info" class="infoentry nice-underline-dashed" style="opacity: 0.7;" onclick="showHide('info')">
-      інфо
+  <div id="info" style="display: none;">
+    Точні дані — натиснути на область<br><br>
+    Відкриті дані — <a href="https://covid19.gov.ua/analitichni-paneli-dashbordy" class="nice-underline" target="blank">МОЗ</a><br>
+    Візуалізація — <a href="https://siniavtsev.io" class="nice-underline" target="blank">siniavtsev.io</a><br><br>
+    
+    <div class="infoentry">
+      Поділитись картою
     </div>
+    
     <div class="likely likely-light likely-small infoentry" data-counters="no">
       <div class="twitter" data-via="beyond_danube"></div>
       <div class="telegram"></div>
       <div class="facebook"></div>
-    </div>
+    </div><br><br>
   </div>
+
+  <div id="show-hide-info"onclick="showHide('info', this.id)"><span class="nice-underline-dashed">показати інфо</span></div>
 </div>
 
 <script>
-
-setDateToSelector();
 
 mapboxgl.accessToken = configuration.mapboxToken;
   let map = new mapboxgl.Map({
@@ -166,7 +166,8 @@ document.getElementById('day').addEventListener('blur', checkDateInput);
 document.getElementById('day').addEventListener('focus', selectFiled);
 
 window.addEventListener('load', changeColorValuesToDataFromSelector);
-window.addEventListener('load', setLegendColorsFromRange(lienarGradientBluePurple));
+window.addEventListener('load', setLegendColorsFromRange(defaultGradient));
+window.addEventListener('load', setDateToSelector);
 
 </script>
 </body>
