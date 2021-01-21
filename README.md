@@ -13,7 +13,7 @@ Ministry of Health of Ukraine [publishes](https://covid19.gov.ua/analitichni-pan
   
 Map can be used for free on any your resource, like site or blog. You'll need to use an iframe in order to use the map. In case you have no idea what iframe is, however want to use map, drop me a line and I will help you.
 
-`<iframe src="https://beyond-danube.github.io/ukr-covid-19"></iframe>`
+`<iframe src="https://beyond-danube.github.io/ukr-covid-19" style="height: 800px; width: 1280px; border: 0;"></iframe>`
 
 ## Використані технології / Used technologies
 * [Mapbox](https://www.mapbox.com) — absolutely unbelievable map usage technology. [UKR COVID-19](https://beyond-danube.github.io/ukr-covid-19/) is mostly built with just an [example from Mapbox](https://docs.mapbox.com/mapbox-gl-js/example/data-join/).
