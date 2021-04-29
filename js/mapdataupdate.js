@@ -17,10 +17,13 @@ function updateDataLayer(){
     
     drawingdata.data.forEach(function(row) {
     matchExpression.push(row['ADM1_PCODE'], getColor(row['DATA'], defaultGradient, getRangeFormSelector()));
+
   });
 
   // Last value is the default, used where there is no data
   matchExpression.push('rgba(0, 0, 0, 0)');
+
+  checkForAllZeroValues(drawingdata) ? showAllZeroWarn() : hideAllZeroWarn();
 
   map.addLayer({
     'id': 'ukradm-join',
@@ -66,4 +69,32 @@ function getFiledValueAccoringToYear(){
   let field = year === '20' ? settings.value : settings.options[settings.selectedIndex].dataset.newfiled;
 
   return field;
+}
+
+function checkForAllZeroValues(drawingdata) {
+  
+  let allZero = true;
+  
+  drawingdata.data.forEach(e => {
+    
+    if (e.DATA > 0) {
+      allZero = false;
+    }
+  });
+
+  return allZero;
+}
+
+function showAllZeroWarn() {
+
+  let allZeroWarn = document.getElementById('all-zero');
+  allZeroWarn.style.display = "block";
+
+}
+
+function hideAllZeroWarn() {
+
+  let allZeroWarn = document.getElementById('all-zero');
+  allZeroWarn.style.display = "none";
+
 }
