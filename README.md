@@ -17,6 +17,6 @@ Map can be used for free on any your resource, like site or blog. You'll need to
 
 ## Використані технології / Used technologies
 * [Mapbox](https://www.mapbox.com) — absolutely unbelievable map usage technology. [UKR COVID-19](https://beyond-danube.github.io/ukr-covid-19/) is mostly built with just an [example from Mapbox](https://docs.mapbox.com/mapbox-gl-js/example/data-join/).
-* [Heroku](https://heroku.com) — another unbelievable technology, used here for fetching data from Ministry of Health of Ukraine web site, and for tranforming it to readable json. It's not exposed here however endpoints can be used for free as well. Documentation: [UKR COVID-19 MOZ DATA](https://ukr-covid-19-moz-data.herokuapp.com/api-docs/).
+* [Heroku](https://heroku.com) — another unbelievable technology, used here for fetching data from Ministry of Health of Ukraine web site, and for tranforming it to readable json. Back-end part — [ukr-covid-19-moz-data](https://github.com/beyond-danube/ukr-covid-19-moz-data) repo. Documentation: [UKR COVID-19 MOZ DATA](https://ukr-covid-19-moz-data.herokuapp.com/api-docs/).
 * [Papa Parse](https://www.papaparse.com) — JavaScript CSV parser made it possible to easily get raw data and transform it to applicable for usage im maps.
 * [Likely](https://github.com/NikolayRys/Likely) — only acceptable social media sharing buttons, that look just OK and super easy to use with declarative API, driven by [Ilya Birman](https://ilyabirman.net).
